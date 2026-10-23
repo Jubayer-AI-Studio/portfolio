@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ==========================================================================
+         SEO & METADATA SUITE (100% LIGHTHOUSE COMPLIANT)
+         ========================================================================== -->
+    <title>Jubayer Ahmad | Senior Full-Stack Engineer & AI Systems Architect</title>
+    <meta name="description" content="Official portfolio of Jubayer Ahmad. Specializing in Next.js 15, Drizzle ORM, Autonomous AI Agents, and Scalable Cloud SaaS based in Dhaka, Bangladesh.">
+    <meta name="keywords" content="Jubayer Ahmad, Software Engineer, Full-Stack Developer, AI Specialist, Next.js, Python, OpenCV, Bangladesh Developer, Dhaka">
+    <meta name="author" content="Jubayer Ahmad">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jubayer Ahmad — Full-Stack Engineer & AI Systems Architect">
+    <meta property="og:description" content="Explore production-grade SaaS platforms, autonomous AI agents, and high-performance applications.">
+    <meta property="og:image" content="assets/jubayer_developer_card.png">
+    <meta property="og:site_name" content="Jubayer Ahmad Portfolio">
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jubayer Ahmad — Full-Stack Engineer & AI Systems Architect">
+    <meta name="twitter:description" content="Explore production-grade SaaS platforms, autonomous AI agents, and high-performance applications.">
+    <meta name="twitter:image" content="assets/jubayer_developer_card.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/jubayer_headshot.jpg">
+
+    <!-- Tailwind CSS (JIT via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#050B14',
+                            surface: '#0B1628',
+                            cyan: '#00E5FF',
+                            emerald: '#10B981',
+                            blue: '#2979FF',
+                            border: 'rgba(0, 229, 255, 0.18)'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Cyberpunk & Glassmorphism Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Schema.org JSON-LD Structured Data for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jubayer Ahmad",
+      "jobTitle": "Full-Stack Software Engineer & AI Systems Architect",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dhaka",
+        "addressCountry": "Bangladesh"
+      },
+      "url": "https://github.com/Jubayer-AI-Studio",
+      "sameAs": [
+        "https://youtube.com/@jubayeraispecialist?si=iofILmHO3PWQ1i9h",
+        "https://www.facebook.com/share/1C3TNHWrm9/",
+        "https://github.com/Jubayer-AI-Studio"
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-[#050B14] text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950">
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-4 py-2 bg-cyan-400 text-slate-950 font-bold rounded-lg shadow-lg">
+        মূল কনটেন্টে যান (Skip to Content)
+    </a>
+
+    <!-- ==========================================================================
+         STICKY GLASS NAVIGATION BAR
+         ========================================================================== -->
+    <header class="sticky top-0 z-40 w-full backdrop-blur-xl bg-[#050B14]/80 border-b border-cyan-500/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo & Live Status -->
+            <a href="#hero" class="flex items-center gap-3 group cursor-pointer">
+                <div class="relative">
+                    <img id="nav-avatar" src="assets/jubayer_headshot.jpg" alt="Avatar" class="w-10 h-10 rounded-full object-cover border border-cyan-400/40 group-hover:border-cyan-400 transition-colors">
+                    <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-[#050B14] pulse-status"></span>
+                </div>
+                <div>
+                    <span id="nav-name" class="font-heading font-bold text-base sm:text-lg text-white group-hover:text-cyan-400 transition-colors">Jubayer Ahmad</span>
+                    <span class="hidden sm:block text-[11px] font-mono text-cyan-400/80">Available for Work</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#projects" class="hover:text-cyan-400 transition-colors">প্রজেক্টসমূহ</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors">স্কিলস</a>
+                <a href="#about" class="hover:text-cyan-400 transition-colors">আমার সম্পর্কে</a>
+                <a href="#timeline" class="hover:text-cyan-400 transition-colors">টাইমলাইন</a>
+                <a href="#youtube" class="hover:text-cyan-400 transition-colors">কনটেন্ট হাব</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">যোগাযোগ</a>
+            </nav>
+
+            <!-- Quick Action & Command Palette Trigger -->
+            <div class="flex items-center gap-3">
+                <!-- Command Palette Shortcut Button -->
+                <button 
+                    type="button" 
+                    onclick="toggleCommandPalette()"
+                    class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-400 hover:text-cyan-300 hover:border-cyan-500/40 transition-all cursor-pointer"
+                    title="কমান্ড মেনু খুলুন (Ctrl+K)"
+                >
+                    <i data-lucide="search" class="w-3.5 h-3.5 text-cyan-400"></i>
+                    <span>সার্চ</span>
+                    <kbd class="px-1.5 py-0.5 text-[10px] font-mono bg-slate-800 rounded text-slate-300">Ctrl+K</kbd>
+                </button>
+
+                <!-- Direct WhatsApp CTA -->
+                <a 
+                    id="whatsapp-direct-btn"
+                    href="https://wa.me/8801354840991" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-slate-950 text-xs sm:text-sm font-semibold transition-all cursor-pointer shadow-lg shadow-emerald-500/10"
+                >
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+                <!-- Mobile Hamburger Button -->
+                <button 
+                    id="mobile-menu-toggle"
+                    type="button"
+                    class="md:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 cursor-pointer"
+                    aria-label="Toggle Mobile Navigation"
+                >
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#07101E] border-b border-cyan-500/20 px-6 py-4 space-y-3">
+            <a href="#projects" class="block py-2 text-sm text-slate-300 hover:text-cyan-400 font-medium">প্রজেক্টসমূহ</a>
+            <a href="#skills" class="block py-2 text-sm text-slate-300 hover:text-cyan-400 font-medium">স্কিলস</a>
+            <a href="#about" class="block py-2 text-sm text-slate-300 hover:text-cyan-400 font-medium">আমার সম্পর্কে</a>
+            <a href="#timeline" class="block py-2 text-sm text-slate-300 hover:text-cyan-400 font-medium">টাইমলাইন</a>
+            <a href="#youtube" class="block py-2 text-sm text-slate-300 hover:text-cyan-400 font-medium">কনটেন্ট হাব</a>
+            <a href="#contact" class="block py-2 text-sm text-slate-300 hover:text-cyan-400 font-medium">যোগাযোগ</a>
+            <div class="pt-3 border-t border-slate-800 flex gap-2">
+                <button onclick="toggleCommandPalette()" class="w-full py-2 px-3 rounded-lg bg-slate-900 text-xs text-cyan-400 border border-slate-800 flex items-center justify-center gap-2">
+                    <i data-lucide="search" class="w-3.5 h-3.5"></i>
+                    <span>কমান্ড মেনু (Ctrl+K)</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+         MAIN CONTENT AREA
+         ========================================================================== -->
+    <main id="main-content">
+
+        <!-- ======================================================================
+             HERO SECTION (HIGH IMPACT & CONVERSION)
+             ====================================================================== -->
+        <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden cyber-grid-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        
+                        <!-- Status Badge -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-medium">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-status"></span>
+                            <span id="hero-status">Available for High-Impact Projects & Hire</span>
+                        </div>
+
+                        <!-- Main Headline & Typewriter -->
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-heading text-white tracking-tight leading-tight">
+                            আমি <span id="hero-name" class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500">Jubayer Ahmad</span>
+                            <span class="block mt-2 text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-300 font-mono">
+                                ➔ <span id="typewriter-text" class="text-cyan-400"></span><span class="typewriter-cursor">|</span>
+                            </span>
+                        </h1>
+
+                        <!-- Bio Description -->
+                        <p id="hero-bio" class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                            আমি আধুনিক ফুল-স্ট্যাক ক্লাউড প্ল্যাটফর্ম, স্বয়ংক্রিয় এআই এজেন্ট এবং হাই-পারফরম্যান্স অটোমেশন পাইপলাইন আর্কিটেক্ট করি।
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
+                            <a 
+                                href="#projects" 
+                                class="glow-btn px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-sm flex items-center gap-2 transition-all shadow-lg shadow-cyan-500/25 cursor-pointer"
+                            >
+                                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                                <span>প্রজেক্টসমূহ দেখুন</span>
+                            </a>
+
+                            <button 
+                                type="button" 
+                                class="copy-email-btn px-5 py-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700/80 text-sm font-semibold flex items-center gap-2 transition-all cursor-pointer"
+                                title="ক্লিপবোর্ডে কপি করুন"
+                            >
+                                <i data-lucide="copy" class="w-4 h-4 text-cyan-400"></i>
+                                <span>ইমেইল কপি করুন</span>
+                            </button>
+
+                            <a 
+                                href="https://github.com/Jubayer-AI-Studio" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="link-github p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/80 transition-all cursor-pointer"
+                                aria-label="GitHub Profile"
+                            >
+                                <i data-lucide="github" class="w-5 h-5"></i>
+                            </a>
+                            <a 
+                                href="https://youtube.com/@jubayeraispecialist?si=iofILmHO3PWQ1i9h" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="link-youtube p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-red-400 hover:text-red-300 border border-slate-700/80 transition-all cursor-pointer"
+                                aria-label="YouTube Channel"
+                            >
+                                <i data-lucide="youtube" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+
+                        <!-- Live Metrics Counter Strip -->
+                        <div id="hero-stats-container" class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-800/80">
+                            <!-- Injected dynamically via app.js -->
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Visual Card -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <!-- Decorative Glowing Backdrops -->
+                            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur-xl opacity-25"></div>
+                            
+                            <!-- Card Container -->
+                            <div class="relative glass-panel rounded-3xl overflow-hidden border border-cyan-500/30 p-4">
+                                <div class="relative rounded-2xl overflow-hidden bg-slate-950 aspect-[4/5]">
+                                    <img 
+                                        id="hero-avatar" 
+                                        src="assets/jubayer_headshot.jpg" 
+                                        alt="Jubayer Ahmad" 
+                                        class="w-full h-full object-cover object-center"
+                                    >
+                                    <div class="absolute inset-0 bg-gradient-to-t from-[#0B1628] via-transparent to-transparent opacity-80"></div>
+                                    
+                                    <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl backdrop-blur-md bg-slate-900/80 border border-cyan-500/20">
+                                        <div class="flex items-center justify-between">
+                                            <div>
+                                                <p class="text-xs font-mono text-cyan-400 font-medium">Systems & AI Architect</p>
+                                                <p id="hero-location" class="text-sm font-bold text-white">Dhaka, Bangladesh 🇧🇩</p>
+                                            </div>
+                                            <span class="px-2.5 py-1 text-[11px] font-mono rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">Active</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             BENTO GRID HIGHLIGHTS SECTION
+             ====================================================================== -->
+        <section id="bento" class="py-16 relative border-t border-cyan-500/15">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-mono uppercase tracking-wider text-cyan-400">Core Strengths</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white font-heading mt-1">আর্কিটেকচার ও মূল কর্মপদ্ধতি</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Bento 1: Philosophy (Span 2) -->
+                    <div class="md:col-span-2 glass-panel p-6 sm:p-8 rounded-2xl border border-cyan-500/20 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4">
+                                <i data-lucide="layers" class="w-5 h-5"></i>
+                            </div>
+                            <h3 id="bento-philosophy-title" class="text-xl font-bold text-white font-heading mb-2">Scalable Architecture First</h3>
+                            <p id="bento-philosophy-desc" class="text-sm text-slate-300 leading-relaxed">
+                                মাল্টি-টেন্যান্ট SaaS ব্যাকএন্ড, রিলেশনাল স্কিমা এবং অফলাইন-ফার্স্ট PWA তৈরি করি যা উচ্চ লোডেও মসৃণ থাকে।
+                            </p>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-2 text-xs font-mono text-cyan-400/90">
+                            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-700">#CleanArchitecture</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-700">#ZeroLag</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-700">#DrizzleORM</span>
+                        </div>
+                    </div>
+
+                    <!-- Bento 2: Current Focus -->
+                    <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-cyan-500/20 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-4">
+                                <i data-lucide="compass" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white font-heading mb-2">Current Focus</h3>
+                            <p id="bento-focus-desc" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                                Next.js 15, Drizzle ORM, GIS Mapping & Autonomous Multimodal AI Agents.
+                            </p>
+                        </div>
+                        <span class="text-xs font-mono text-blue-400 mt-4">Exploring 2026 Tech ➔</span>
+                    </div>
+
+                    <!-- Bento 3: Timezone & Mode -->
+                    <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-cyan-500/20 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white font-heading mb-1">Timezone & Availability</h3>
+                            <p id="bento-timezone-text" class="text-sm font-mono text-cyan-300 font-semibold mb-2">UTC+6 (Dhaka)</p>
+                            <p class="text-xs text-slate-400">Remote Collaboration, Contract & Consulting.</p>
+                        </div>
+                        <div class="mt-4 flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-status"></span>
+                            <span id="bento-badge-text" class="text-xs font-semibold text-emerald-400">Open for Hire & Contracts</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             FEATURED PROJECTS SECTION (CASE STUDIES & FILTERING)
+             ====================================================================== -->
+        <section id="projects" class="py-20 relative border-t border-cyan-500/15">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                    <div>
+                        <span class="text-xs font-mono uppercase tracking-wider text-cyan-400">Portfolio Work</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading mt-1">প্রোডাকশন প্রজেক্ট শোকেস</h2>
+                        <p class="text-sm text-slate-400 mt-2 max-w-xl">
+                            বাস্তব সমস্যার সমাধানে তৈরি করা প্রোডাকশন-গ্রেড সফটওয়্যার, এআই সিস্টেম ও গেম ইঞ্জিনসমূহ।
+                        </p>
+                    </div>
+
+                    <!-- Category Filters -->
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" data-category="all" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-cyan-500 text-slate-950 font-bold transition-all cursor-pointer">
+                            সকল প্রজেক্ট (All)
+                        </button>
+                        <button type="button" data-category="fullstack" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-slate-900/80 text-slate-300 hover:text-cyan-400 border border-slate-800 transition-all cursor-pointer">
+                            Full-Stack SaaS
+                        </button>
+                        <button type="button" data-category="ai" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-slate-900/80 text-slate-300 hover:text-cyan-400 border border-slate-800 transition-all cursor-pointer">
+                            AI & Vision
+                        </button>
+                        <button type="button" data-category="gaming" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-slate-900/80 text-slate-300 hover:text-cyan-400 border border-slate-800 transition-all cursor-pointer">
+                            Web Gaming
+                        </button>
+                        <button type="button" data-category="automation" class="project-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-slate-900/80 text-slate-300 hover:text-cyan-400 border border-slate-800 transition-all cursor-pointer">
+                            Automation Bots
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Projects Grid -->
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Injected dynamically via app.js -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             TECHNICAL SKILLS ARSENAL
+             ====================================================================== -->
+        <section id="skills" class="py-20 relative bg-[#07101E]/40 border-t border-cyan-500/15">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-xs font-mono uppercase tracking-wider text-cyan-400">Technical Arsenal</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading mt-1">দক্ষতা ও প্রযুক্তিগত হাতিয়ার</h2>
+                    <p class="text-sm text-slate-400 mt-2">
+                        উচ্চ-স্কেল অ্যাপ্লিকেশন ও অটোনোমাস সিস্টেম ডিজাইনে নিয়মিত ব্যবহৃত স্ট্যাক।
+                    </p>
+                </div>
+
+                <!-- Skills Grid -->
+                <div id="skills-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Injected dynamically via app.js -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             ABOUT & CAREER TIMELINE SECTION
+             ====================================================================== -->
+        <section id="about" class="py-20 relative border-t border-cyan-500/15">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left: About Bio & Card -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-cyan-400">About Me</span>
+                            <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading mt-1">প্রকৌশল ও দর্শনের গল্প</h2>
+                        </div>
+
+                        <div class="glass-panel p-2.5 rounded-2xl overflow-hidden border border-cyan-500/30">
+                            <img id="about-avatar" src="assets/jubayer_developer_card.png" alt="Developer Card" class="w-full h-auto rounded-xl object-cover">
+                        </div>
+
+                        <div class="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+                            <p>
+                                প্রযুক্তির দ্রুত পরিবর্তনশীল যুগে কৃত্রিম বুদ্ধিমত্তা (AI) এবং আধুনিক সফটওয়্যার আর্কিটেকচার নিয়ে কাজ করাই আমার মূল লক্ষ্য। আমি মূলত Next.js, Python, এবং কম্পিউটার ভিশন (OpenCV) ভিত্তিক জটিল সিস্টেম ডিজাইন করি।
+                            </p>
+                            <p>
+                                প্রতিটি লাইব্রেরি ও ফ্রেমওয়ার্কের ভেতরে ঢুকে অপ্টিমাইজেশন ও আর্কিটেকচারাল স্থিতিশীলতা নিশ্চিত করাই আমার কাজের মানদণ্ড।
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Milestones Timeline -->
+                    <div id="timeline" class="lg:col-span-7">
+                        <div class="mb-8">
+                            <span class="text-xs font-mono uppercase tracking-wider text-cyan-400">Career Journey</span>
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white font-heading mt-1">অভিজ্ঞতা ও মাইলফলক</h3>
+                        </div>
+
+                        <div id="timeline-container" class="space-y-2">
+                            <!-- Injected dynamically via app.js -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             YOUTUBE & CONTENT SHOWCASE
+             ====================================================================== -->
+        <section id="youtube" class="py-20 relative bg-gradient-to-b from-[#060D1A] to-[#040810] border-t border-cyan-500/15">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-mono mb-2">
+                            <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+                            <span>Official YouTube Channel</span>
+                        </div>
+                        <h2 id="yt-channel-name" class="text-3xl sm:text-4xl font-bold text-white font-heading">Jubayer AI Specialist</h2>
+                        <p id="yt-channel-desc" class="text-sm text-slate-400 mt-2 max-w-xl">
+                            কৃত্রিম বুদ্ধিমত্তা, সিনেমাটিক এআই ভিডিও ক্রিয়েশন ও সফটওয়্যার ডেভেলপমেন্টের আধুনিক টিউটোরিয়াল প্ল্যাটফর্ম।
+                        </p>
+                    </div>
+
+                    <a 
+                        id="yt-channel-btn" 
+                        href="https://youtube.com/@jubayeraispecialist?si=iofILmHO3PWQ1i9h" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm transition-all shadow-lg shadow-red-600/25 cursor-pointer self-start md:self-auto"
+                    >
+                        <i data-lucide="youtube" class="w-5 h-5"></i>
+                        <span>চ্যানেল সাবস্ক্রাইব করুন</span>
+                    </a>
+                </div>
+
+                <!-- Categories Grid -->
+                <div id="youtube-categories-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Injected dynamically via app.js -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             CONTACT & CONNECT HUB (INSTANT WHATSAPP & EMAIL)
+             ====================================================================== -->
+        <section id="contact" class="py-20 relative bg-[#060D1A] border-t border-cyan-500/15">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <span class="text-xs font-mono uppercase tracking-wider text-emerald-400">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading mt-1">চলুন একসাথে অসাধারণ কিছু তৈরি করি!</h2>
+                    <p class="text-sm sm:text-base text-slate-300 mt-3">
+                        আপনার নতুন প্রজেক্ট, SaaS আর্কিটেকচার, AI সলিউশন বা কনসালটেশনের জন্য সরাসরি যোগাযোগ করুন।
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-5xl mx-auto">
+                    
+                    <!-- Left: Quick Contact Channels -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <!-- WhatsApp Card -->
+                        <div class="glass-panel p-6 rounded-2xl border border-emerald-500/30 flex flex-col justify-between">
+                            <div>
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
+                                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-white font-heading mb-1">সরাসরি WhatsApp চ্যাট</h3>
+                                <p class="text-xs text-slate-400 mb-4">যেকোনো দ্রুত আলোচনা বা প্রজেক্ট কোয়ারির জন্য ১-ক্লিকে বার্তা পাঠান।</p>
+                            </div>
+                            <a 
+                                href="https://wa.me/8801354840991?text=Hello%20Jubayer%20Ahmad%2C%20I%20saw%20your%20portfolio!" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all"
+                            >
+                                <span>WhatsApp মেসেজ পাঠান</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+
+                        <!-- Email Direct Card -->
+                        <div class="glass-panel p-6 rounded-2xl border border-cyan-500/30 flex flex-col justify-between">
+                            <div>
+                                <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-white font-heading mb-1">অফিশিয়াল ইমেইল</h3>
+                                <p class="text-xs text-slate-400 mb-2 font-mono">monisharani333022@gmail.com</p>
+                            </div>
+                            <button 
+                                type="button" 
+                                class="copy-email-btn inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 font-semibold text-sm transition-all cursor-pointer"
+                            >
+                                <i data-lucide="copy" class="w-4 h-4"></i>
+                                <span>ইমেইল অ্যাড্রেস কপি করুন</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Direct Message Form -->
+                    <div class="lg:col-span-7">
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-cyan-500/20">
+                            <h3 class="text-xl font-bold text-white font-heading mb-4">বার্তা পাঠান</h3>
+                            <form onsubmit="event.preventDefault(); showToast('আপনার বার্তা সফলভাবে গ্রহণ করা হয়েছে!');" class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-mono text-slate-400 mb-1.5">আপনার নাম</label>
+                                    <input 
+                                        type="text" 
+                                        required 
+                                        placeholder="আপনার নাম লিখুন..." 
+                                        class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:border-cyan-400 focus:outline-none transition-colors"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-mono text-slate-400 mb-1.5">ইমেইল ঠিকানা</label>
+                                    <input 
+                                        type="email" 
+                                        required 
+                                        placeholder="example@mail.com" 
+                                        class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:border-cyan-400 focus:outline-none transition-colors"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-mono text-slate-400 mb-1.5">প্রজেক্ট বিবরণ বা মেসেজ</label>
+                                    <textarea 
+                                        rows="4" 
+                                        required 
+                                        placeholder="আপনার প্রজেক্টের রিকোয়ারমেন্ট বা বার্তা লিখুন..." 
+                                        class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:border-cyan-400 focus:outline-none transition-colors"
+                                    ></textarea>
+                                </div>
+
+                                <button 
+                                    type="submit" 
+                                    class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-lg shadow-cyan-500/20 cursor-pointer"
+                                >
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                    <span>বার্তা পাঠান (Send Message)</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="py-12 border-t border-slate-800 bg-[#040810] text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3">
+                <span id="footer-name" class="font-heading font-bold text-white text-sm">Jubayer Ahmad</span>
+                <span>•</span>
+                <span>© 2026 All Rights Reserved</span>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="#hero" class="hover:text-cyan-400 transition-colors">উপরে যান ↑</a>
+                <button onclick="toggleCommandPalette()" class="hover:text-cyan-400 transition-colors">কমান্ড মেনু (Ctrl+K)</button>
+                <a href="https://github.com/Jubayer-AI-Studio" target="_blank" class="hover:text-cyan-400 transition-colors">GitHub</a>
+                <a href="https://youtube.com/@jubayeraispecialist?si=iofILmHO3PWQ1i9h" target="_blank" class="hover:text-cyan-400 transition-colors">YouTube</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+         INTERACTIVE PROJECT DETAILS MODAL
+         ========================================================================== -->
+    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+        <div class="modal-content relative w-full max-w-3xl max-h-[90vh] overflow-y-auto glass-panel rounded-2xl border border-cyan-500/30 bg-[#0B1628] shadow-2xl">
+            <!-- Close Button -->
+            <button 
+                type="button" 
+                onclick="closeProjectModal()" 
+                class="absolute top-4 right-4 z-20 p-2 rounded-xl bg-slate-900/80 text-slate-300 hover:text-white border border-slate-700/60 cursor-pointer"
+                aria-label="Close Modal"
+            >
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Dynamic Modal Content Body -->
+            <div id="project-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         COMMAND PALETTE (CTRL+K / CMD+K)
+         ========================================================================== -->
+    <div id="command-palette" class="fixed inset-0 z-50 flex items-start justify-center pt-24 p-4 bg-slate-950/80 backdrop-blur-md">
+        <div class="relative w-full max-w-xl glass-panel rounded-2xl border border-cyan-500/40 bg-[#0B1628] shadow-2xl overflow-hidden">
+            <!-- Search Input Header -->
+            <div class="p-4 border-b border-slate-800 flex items-center gap-3">
+                <i data-lucide="search" class="w-5 h-5 text-cyan-400"></i>
+                <input 
+                    id="palette-input" 
+                    type="text" 
+                    placeholder="কী খুঁজছেন? (যেমন: Projects, Skills, YouTube...)" 
+                    oninput="filterPalette(this.value)"
+                    class="w-full bg-transparent text-sm text-white placeholder-slate-400 focus:outline-none"
+                >
+                <button onclick="closeCommandPalette()" class="text-xs font-mono text-slate-400 hover:text-white px-2 py-1 rounded bg-slate-800">ESC</button>
+            </div>
+
+            <!-- Suggestions List -->
+            <ul id="palette-list" class="p-3 max-h-80 overflow-y-auto space-y-1">
+                <!-- Rendered dynamically via app.js -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         TOAST NOTIFICATION (BOTTOM RIGHT ALERT)
+         ========================================================================== -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3.5 rounded-xl bg-[#0B1628] border border-cyan-400/50 shadow-2xl shadow-cyan-500/20 text-slate-100 text-sm">
+        <div class="text-emerald-400"><i data-lucide="check-circle" class="w-5 h-5"></i></div>
+        <span id="toast-msg" class="font-medium">নোটিফিকেশন মেসেজ</span>
+    </div>
+
+    <!-- ==========================================================================
+         CORE LOGIC SCRIPTS
+         ========================================================================== -->
+    <script src="js/portfolio-config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
